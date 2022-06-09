@@ -1,0 +1,285 @@
+.mainWindow {
+  height: 67vh; // 100%
+  width: 67vh;
+  //width: 37vw;
+  //width: 427px;
+  margin: 0 auto;
+  background: #25252d;
+}
+
+.subWindowWrapper {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 9;
+  width: 165px;
+}
+
+.subWindow {
+  background: #25252d;
+  border: 1px solid #ffffff;
+  margin-bottom: 20px;
+
+  .loading-text {
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 90px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 400;
+  }
+}
+
+.consultation_root {
+  .views_wrapper {
+    min-width: 1000px;
+    min-height: 800px;
+    display: flex;
+    justify-content: center;
+    .left {
+      width: 70%; // 1280px
+      height: 100%; //
+      background: #feffe6;
+      .patient_box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 7.68vh;
+        background: #1a1c20;
+        .logo {
+          width: 15.31vw; // 294px
+          margin-left: 54px;
+          content: url('../../assets/logo_gray.png');
+        }
+        .info {
+          margin-right: 54px;
+          color: #ffffff;
+          font-weight: 400;
+          font-size: 22px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          line-height: 3.7vh; //  40px
+          span {
+            margin-left: 10px;
+          }
+        }
+      }
+      .share_wrapper {
+        width: 100%;
+        height: calc(100vh - 7.68vh); // 88.24vh
+        background: #9f9f9f; 
+        text-align: center;
+      }
+    }
+    .right {
+      width: 30%; // 560px
+      background: #1a1c20;
+      height: 100%;
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 7.68vh;
+        padding: 16px;
+        background: #1a1c20;
+
+        .invite_btn {
+          width: 9.01vw;
+          height: 5.18vh;
+          background: #2aa0f9;
+          border-radius: 8px;
+          span {
+            // width: 72px;
+            height: 2.315vh; // 25px
+            color: #ffffff;
+            font-weight: 400;
+            font-size: 0.975vw; // 18px
+            font-family: PingFangSC-Regular, PingFang SC;
+            line-height: 2.315vh; // 25px
+          }
+        }
+
+        .ope_box {
+          img {
+            width: 3.33vh; // 36px
+            height: 3.33vh;
+            cursor: pointer;
+          }
+
+          .hangup_i {
+            height: 5.18vh;
+            width: 5.18vh;
+            margin-right: 22px;
+            content: url('../../assets/images/hangup.png');
+          }
+
+          .net_i {
+            width: 3.52vh; // 38px
+            height: 3.52vh;
+            margin-right: 22px;
+            content: url('../../assets/images/net-0.png');
+          }
+          .net_0 {
+            content: url('../../assets/images/net-0.png');
+          }
+          .net_1 {
+            content: url('../../assets/images/net-1.png');
+          }
+          .net_2 {
+            content: url('../../assets/images/net-2.png');
+          }
+          .net_3 {
+            content: url('../../assets/images/net-3.png');
+          }
+          .net_4 {
+            content: url('../../assets/images/net-4.png');
+          }
+          .net_5 {
+            content: url('../../assets/images/net-5.png');
+          }
+
+          .fullscreen_i {
+            content: url('../../assets/images/full.png');
+          }
+          .shrinkscreen_i {
+            content: url('../../assets/images/full-shrink.png');
+          }
+        }
+      }
+      .remote_container {
+        position: relative;
+        height: calc(100vh - 7.68vh); // calc(100% - 83px)
+        .experts_container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          // width: 29.1vw; // 560px
+          height: 45vh; // 480px
+          padding: 18px;
+          overflow: auto;
+          border-top: 1px solid #26aac9;
+        }
+        .clinic_viewbox {
+          position: relative;
+          width: 29.1vw; // 560px
+          height: 40.9vh; // 420px
+          margin: auto;
+          background: #1f232b;
+        }
+        .expert_viewbox {
+          position: relative;
+          flex-shrink: 0;
+          width: 13.95vw;
+          height: 168px; // 18.6vh
+          margin-top: 32px;
+          background: #1f232b;
+        }
+        .ope_box_right {
+          position: absolute;
+          bottom: 0;
+          z-index: 99;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          height: 9.81vh; // 106px
+          background: rgba(26, 28, 32, 0.3);
+          transition: all 0.6s;
+
+          img {
+            height: 7.59vh;
+            margin: auto;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .single_viewbox {
+    position: relative;
+
+    .name_tag {
+      position: absolute;
+      top: calc(32px + 6px);
+      left: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 114px;
+      height: 28px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 14px;
+
+      img {
+        width: 15px;
+        height: 15px;
+        margin-right: 9px;
+        line-height: 28px;
+      }
+      .host_i {
+        content: url('../../assets/images/microphone.png');
+      }
+      span {
+        // width: 64px;
+        height: 28px;
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 16px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        line-height: 28px;
+      }
+    }
+
+    .org {
+      // width: 196px;
+      height: 20px;
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 14px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      line-height: 20px;
+    }
+
+    .more_box {
+      .more_i {
+        position: absolute;
+        top: 6px; //calc(32px + 6px)
+        right: 7px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        content: url('../../assets/images/more.png');
+        z-index: 99;
+      }
+      .more_list {
+        width: 102px;
+        height: 71px;
+        background: rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        box-shadow: 2px 1px 8px 0px rgba(122, 123, 124, 0.5);
+        filter: blur(0px);
+      }
+    }
+  }
+
+  :global {
+    .ant-badge-count {
+      z-index: auto;
+      min-width: 20px;
+      height: 20px;
+      padding: 0 6px;
+      color: #2aa0f9;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 20px;
+      white-space: nowrap;
+      text-align: center;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 0 1px #141414;
+    }
+  }
+}
